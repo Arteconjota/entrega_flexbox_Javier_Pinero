@@ -1,0 +1,304 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url(assets/fonts//Montserrat/Montserrat-SemiBold.ttf);
+}
+@font-face {
+  font-family: "Hind";
+  src: url(assets/fonts/Hind/Hind-Light.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --fontFamily-title: "Montserrat";
+  --fontFamily-text: "Hind";
+  --fontSize-text: 1em;
+  --color-primero: #000000e6;
+  --color-segundo: white;
+  --color-tercero: #69cf0f;
+  --space: 30px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: var(--color-primero);
+  background-image: url(assets/background-texture.png);
+  background-size: 12%;
+}
+
+header {
+  display: flex;
+  width: 100%;
+  height: auto;
+  align-items: center;
+  justify-content: space-between;
+  padding: calc(var(--space) / 2);
+  background-color: var(--color-segundo);
+}
+header > nav > .logo {
+  margin-left: calc(var(--space) * 2);
+}
+header > nav > .logo > img {
+  width: 130px;
+  height: 130px;
+}
+header > nav {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+header > nav > .hamburguesa {
+  display: none;
+}
+
+header > nav > .nav-list {
+  display: flex;
+  list-style: none;
+  width: 70%;
+  margin-right: var(--space);
+  justify-content: space-around;
+  align-items: center;
+  gap: var(--space);
+}
+.nav-list > li > a {
+  text-decoration: none;
+  color: var(--color-primero);
+  font-size: 1.5em;
+  font-family: var(--fontFamily-text);
+  font-weight: 500;
+}
+.nav-list > li > a:hover {
+  color: var(--color-tercero);
+}
+
+.hero {
+  min-height: 55vh;
+  margin-top: 80px;
+  padding: var(--space);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--color-tercero);
+  background-image: url(assets/main-background.png);
+}
+.hero > h1 {
+  font-family: var(--fontFamily-title);
+  font-size: 3em;
+  color: var(--color-segundo);
+  padding: var(--space);
+  text-shadow: 1px 1px 2px var(--color-primero);
+}
+.hero > p {
+  font-family: var(--fontFamily-text);
+  font-size: 1.25em;
+  font-weight: 600;
+}
+
+button {
+  display: flex;
+  align-self: center;
+  width: fit-content;
+  padding: 20px;
+  margin: var(--space) 0;
+  font-family: var(--fontFamily-title);
+  background-color: var(--color-segundo);
+  border-radius: 7px;
+  box-shadow: 0.5px 1px var(--color-primero);
+}
+button:hover {
+  color: var(--color-tercero);
+  cursor: pointer;
+}
+
+#About {
+  padding: var(--space);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  min-height: 100svh;
+  margin-top: calc(var(--space) + 10px);
+  flex-wrap: wrap;
+  gap: var(--space);
+}
+#About > div {
+  width: 50%;
+  text-align: center;
+  min-width: 450px;
+}
+#About > div > h2 {
+  padding: calc(var(--space) / 4);
+  font-family: var(--fontFamily-title);
+  font-size: 2em;
+  color: var(--color-tercero);
+  text-shadow: 1px 1px 2px var(--color-primero);
+}
+#About > div > p {
+  font-family: var(--fontFamily-text);
+  font-size: 1em;
+  color: var(--color-segundo);
+  text-align: justify;
+  padding: calc(var(--space) / 4);
+}
+#About > div > p:last-child {
+  color: var(--color-tercero);
+  text-align: center;
+}
+#About > img {
+  width: 40%;
+  max-width: 475px;
+  min-width: 450px;
+  border: var(--color-tercero) 3px groove;
+  border-radius: 2em;
+}
+
+#Carta {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space);
+  min-height: 100svh;
+}
+#Carta > h2 {
+  font-family: var(--fontFamily-title);
+  font-size: 2em;
+  color: var(--color-tercero);
+  text-align: center;
+}
+#Carta > .galeria {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: var(--space);
+  padding: var(--space);
+  justify-content: space-around;
+  gap: var(--space);
+}
+#Carta > .galeria > img {
+  max-width: 50%;
+  min-width: 40%;
+  border: var(--color-segundo) 3px groove;
+  border-radius: 2em;
+  transition: 0.5s;
+}
+#Carta > .galeria > img:hover {
+  transform: scale(1.05);
+  border: var(--color-tercero) 3px groove;
+}
+
+#Contact {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space);
+  min-height: 100svh;
+}
+#Contact > h2 {
+  font-family: var(--fontFamily-title);
+  font-size: 2em;
+  color: var(--color-tercero);
+  text-align: center;
+}
+#Contact p {
+  font-family: var(--fontFamily-text);
+  font-style: normal;
+  color: var(--color-segundo);
+  text-align: justify;
+}
+#Contact > address {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100%;
+  min-width: 60%;
+  justify-content: space-around;
+}
+#Contact > address > p {
+  padding: var(--space);
+  min-width: 324px;
+}
+#Contact > address > p > strong {
+  font-weight: 400;
+}
+#Contact > address > iframe {
+  border: var(--color-tercero) 3px groove;
+  border-radius: 2em;
+}
+#Contact > p {
+  padding: var(--space);
+  text-align: center;
+}
+#Contact > form {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  padding: var(--space);
+  background-color: var(--color-tercero);
+  background-image: url(assets/main-background.png);
+  border-radius: 1em;
+  gap: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#Contact > form > input {
+  display: flex;
+  padding: 10px 20px;
+  border-radius: 1em;
+  text-align: center;
+}
+.btn {
+  background-color: var(--color-primero);
+  color: var(--color-segundo);
+  font-family: var(--fontFamily-text);
+  width: fit-content;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.btn:hover {
+  color: var(--color-tercero);
+  border: var(--color-segundo) 2px groove;
+  cursor: pointer;
+}
+
+footer {
+  background-color: var(--color-segundo);
+  padding: calc(var(--space) / 2);
+  bottom: 0;
+  margin-top: var(--space);
+  text-align: center;
+  font-family: var(--fontFamily-text);
+  color: var(--color-primero);
+}
+footer > p > a {
+  text-decoration: none;
+  color: var(--color-tercero);
+}
+
+@media (max-width: 800px) {
+  header > nav > .nav-list {
+    display: none;
+  }
+  header > nav > .hamburguesa {
+    display: flex;
+    align-items: center;
+  }
+  header > nav > .hamburguesa > img {
+    width: 100px;
+    height: 100px;
+  }
+  header > nav > .hamburguesa > img:hover {
+    cursor: pointer;
+  }
+
+  #Carta > .galeria {
+    flex-basis: 350px;
+    flex-grow: 1;
+  }
+  #Carta > .galeria > img {
+    max-width: 100%;
+  }
+}
